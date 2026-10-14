@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public bool CanJump()
     {
-        return Controller.isGrounded;
+        return Controller.isGrounded;        
     }
     public void OnJump(InputAction.CallbackContext obj)
     {
@@ -71,6 +71,8 @@ public class PlayerMovement : MonoBehaviour
 
         Controller.height = IsCrouching ? CrouchHeight : OriginalHeight;
         CurrentSpeed = IsCrouching ? CrouchSpeed : WalkSpeed;
+        Debug.Log("Crouching");
+
     }
     public void OnSprint(InputAction.CallbackContext obj)
     {
@@ -80,6 +82,27 @@ public class PlayerMovement : MonoBehaviour
         {
             CurrentSpeed = IsSprinting ? SprintSpeed : WalkSpeed;
         }
-    }   
+        Debug.Log("Sprinting");
+    }
+
+    private void Update()
+    {
+        if (Controller.isGrounded && MovementVelocity.y < 0f)
+        {
+            MovementVelocity.y = -2f;
+        }
+
+        Movement = transform.right * MovementInput.x + transform.forward * MovementInput.y;
+        
+        MovementVelocity.y -= Gravity * Time.deltaTime;
+
+
+        Vector3 totalMovement = (Movement * CurrentSpeed) + MovementVelocity;
+
+
+        Controller.Move(totalMovement * Time.deltaTime);
+
+    }
+
 
 }

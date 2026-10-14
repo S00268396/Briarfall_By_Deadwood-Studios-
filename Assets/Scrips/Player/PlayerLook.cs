@@ -11,8 +11,8 @@ public class PlayerLook : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] private Camera PlayerCamera;
-    [SerializeField] private float HorizonSensitivity = 10;
-    [SerializeField] private float VerticalSensitivity = 10;
+    [SerializeField] private float HorizonSensitivity = 0.1f;
+    [SerializeField] private float VerticalSensitivity = 0.1f;
     [SerializeField] private bool IsCursorVisible = true;
 
     private void Awake()
@@ -27,10 +27,10 @@ public class PlayerLook : MonoBehaviour
     }
     protected virtual void UpdateLook()
     {
-        MouseX = LookInput.x * HorizonSensitivity * Time.deltaTime;
-        MouseY = LookInput.y * VerticalSensitivity * Time.deltaTime;
+        MouseX = LookInput.x * HorizonSensitivity;
+        MouseY = LookInput.y * VerticalSensitivity;
 
-        transform.Rotate(Vector3.up * MouseX);
+        transform.Rotate(0f, MouseX, 0f);
 
         XRotation -= MouseY;
         XRotation = Mathf.Clamp(XRotation, -90f, 90f);
