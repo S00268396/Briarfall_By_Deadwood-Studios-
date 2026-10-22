@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController Controller;
 
+    
+
     public bool IsCrouching { get; private set; }
     public bool IsJumping { get; private set; }
     public bool IsSprinting { get; private set; }
@@ -93,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Movement = transform.right * MovementInput.x + transform.forward * MovementInput.y;
-        
+
         MovementVelocity.y -= Gravity * Time.deltaTime;
 
 
@@ -101,8 +103,5 @@ public class PlayerMovement : MonoBehaviour
 
 
         Controller.Move(totalMovement * Time.deltaTime);
-
-    }
-
-
+    }    
 }
