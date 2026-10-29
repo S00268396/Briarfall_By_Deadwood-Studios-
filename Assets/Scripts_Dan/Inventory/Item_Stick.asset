@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab7ca3bafd5602449a6fe5b53b9b3d3, type: 3}
+  m_Name: Item_Stick
+  m_EditorClassIdentifier: Assembly-CSharp::BaseTemData
+  ID: 267cc2c8-a9b7-42ad-a7e1-daaa03510fa2
+  Name: Stick
+  Description: 'A stick the player can use to break stuff '
+  MaxStackSize: 999
+  Value: 0
+  Weight: 0
+  Icon: {fileID: 0}

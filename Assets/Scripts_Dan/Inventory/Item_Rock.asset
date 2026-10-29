@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab7ca3bafd5602449a6fe5b53b9b3d3, type: 3}
+  m_Name: Item_Rock
+  m_EditorClassIdentifier: Assembly-CSharp::BaseTemData
+  ID: 8720ccd2-78c1-4ecf-8f4e-d5fd0bc62c66
+  Name: Rock
+  Description: A rock that the player can throw
+  MaxStackSize: 999
+  Value: 0
+  Weight: 0
+  Icon: {fileID: 0}
