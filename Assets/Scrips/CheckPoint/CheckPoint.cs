@@ -38,5 +38,7 @@ public class CheckPoint : MonoBehaviour
     private IEnumerator ClearTextAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+
+        CheckPointText.SetText(string.Empty);
     }
 }
