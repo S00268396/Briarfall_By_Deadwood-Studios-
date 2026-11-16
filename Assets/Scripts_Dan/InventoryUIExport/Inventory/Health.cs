@@ -1,24 +1,37 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    public float Width, Height;
+
+    [SerializeField]
+    private RectTransform healthBar;
+
     public float maxHealth = 100f;
-    public float currentHealth;
+    public float health;
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        health = maxHealth;
+    }
+
+    public void SetHealth(float health)
+    {
+        float newWidth = (health / maxHealth) * Width;
+
+        healthBar.sizeDelta = new Vector2(newWidth, Height);
     }
 
     public void TakeDamage(float damageAmount)
     {
-        currentHealth -= damageAmount;
+        health -= damageAmount;
 
-        currentHealth = Mathf.Max(currentHealth, 0);
+        health = Mathf.Max(health, 0);
 
-        Debug.Log($"{gameObject.name} took {damageAmount} damage. Current Health: {currentHealth}");
+        Debug.Log($"{gameObject.name} took {damageAmount} damage. Current Health: {health}");
 
-        if(currentHealth <= 0)
+        if(health <= 0)
         {
             Die();
         }
