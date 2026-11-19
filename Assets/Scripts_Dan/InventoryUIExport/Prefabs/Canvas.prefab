@@ -46,10 +46,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1216424646701968702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d54e52462f272d4f8488b6a322c92fc, type: 3}
+  m_Script: {fileID: 11500000, guid: c75bbf2bbc9fda2449ab559d90420626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryToggle
-  inventoryPanel: {fileID: 6417933750519385374}
+  inventoryPanel: {fileID: 0}
 --- !u!1 &2508987708946622877
 GameObject:
   m_ObjectHideFlags: 0
