@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 2934844899017186440}
   - component: {fileID: 4979326587474236046}
   - component: {fileID: 3352671214018240752}
-  - component: {fileID: 2593210528785718368}
+  - component: {fileID: 3299726747565053931}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2593210528785718368
+--- !u!114 &3299726747565053931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7214690346967842525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6994e54a787940d4ea7961b6a5b0a9ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 21443c92c981154428493fecdc8a9dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Slot
   iconDisplay: {fileID: 81885516220873341}
