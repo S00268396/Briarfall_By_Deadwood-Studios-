@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 4891820312106676258}
   - component: {fileID: 1523122826417802809}
   - component: {fileID: 6030334916233006675}
-  - component: {fileID: 8276186445504232989}
+  - component: {fileID: 1934471058876330488}
   m_Layer: 6
   m_Name: EnemyFollow
   m_TagString: Enemy
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2043545805340103386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10e16b19113b0dd468edf861e3aa4754, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e42fc2472342414b847d756d6b56f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShapeshiftOnSight
   trueFormObject: {fileID: 2226442946443015000}
@@ -248,12 +248,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2043545805340103386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef1e0cec3a6d7184ba26f4899fdfc09c, type: 3}
+  m_Script: {fileID: 11500000, guid: a2f0dd7cfab4db8488dfd798aab3393b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyFollow
   player: {fileID: 0}
   moveSpeed: 4
---- !u!114 &8276186445504232989
+--- !u!114 &1934471058876330488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,12 +262,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2043545805340103386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2cf0ca9c0e2aa643af378c90447b6f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a576ed1c938a7943bff7fc14a0ff6e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  Width: 150
-  Height: 20
-  healthBar: {fileID: 1371370703942587402}
+  Width: 0
+  Height: 0
+  healthBar: {fileID: 0}
   maxHealth: 100
   health: 0
 --- !u!1 &4219283133228391441

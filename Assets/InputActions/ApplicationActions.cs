@@ -151,6 +151,16 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""UseTool"",
+                    ""type"": ""Button"",
+                    ""id"": ""8ff80980-d164-49f2-ab08-4868eaed616a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -263,6 +273,17 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
                     ""action"": ""FlashLight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aaa87e2b-1e5d-4d46-8e22-262bc05845a7"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseTool"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -277,6 +298,7 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
         m_Game_Sprint = m_Game.FindAction("Sprint", throwIfNotFound: true);
         m_Game_Crouch = m_Game.FindAction("Crouch", throwIfNotFound: true);
         m_Game_FlashLight = m_Game.FindAction("FlashLight", throwIfNotFound: true);
+        m_Game_UseTool = m_Game.FindAction("UseTool", throwIfNotFound: true);
     }
 
     ~@ApplicationActions()
@@ -363,6 +385,7 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Game_Sprint;
     private readonly InputAction m_Game_Crouch;
     private readonly InputAction m_Game_FlashLight;
+    private readonly InputAction m_Game_UseTool;
     /// <summary>
     /// Provides access to input actions defined in input action map "Game".
     /// </summary>
@@ -398,6 +421,10 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Game/FlashLight".
         /// </summary>
         public InputAction @FlashLight => m_Wrapper.m_Game_FlashLight;
+        /// <summary>
+        /// Provides access to the underlying input action "Game/UseTool".
+        /// </summary>
+        public InputAction @UseTool => m_Wrapper.m_Game_UseTool;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -442,6 +469,9 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
             @FlashLight.started += instance.OnFlashLight;
             @FlashLight.performed += instance.OnFlashLight;
             @FlashLight.canceled += instance.OnFlashLight;
+            @UseTool.started += instance.OnUseTool;
+            @UseTool.performed += instance.OnUseTool;
+            @UseTool.canceled += instance.OnUseTool;
         }
 
         /// <summary>
@@ -471,6 +501,9 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
             @FlashLight.started -= instance.OnFlashLight;
             @FlashLight.performed -= instance.OnFlashLight;
             @FlashLight.canceled -= instance.OnFlashLight;
+            @UseTool.started -= instance.OnUseTool;
+            @UseTool.performed -= instance.OnUseTool;
+            @UseTool.canceled -= instance.OnUseTool;
         }
 
         /// <summary>
@@ -553,5 +586,12 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnFlashLight(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "UseTool" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnUseTool(InputAction.CallbackContext context);
     }
 }
