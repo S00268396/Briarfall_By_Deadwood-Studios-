@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0506feeb4ee83b47b65cf31d7075373, type: 3}
   m_Name: MainItemTable
   m_EditorClassIdentifier: Assembly-CSharp::InventoryData
-  items: []
+  items:
+  - {fileID: 11400000, guid: 12ece4d8e3632cd4c852f2760e86da2c, type: 2}
+  - {fileID: 11400000, guid: 98ec43365a6228349b98d813ae14d97a, type: 2}
+  - {fileID: 11400000, guid: 978f2431699ef1440842ef193a515615, type: 2}

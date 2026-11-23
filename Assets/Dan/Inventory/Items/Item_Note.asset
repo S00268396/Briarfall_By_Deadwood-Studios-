@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 4592ecbf-4452-41a4-a6a8-5ebba3a056f6
   Name: Item Name
   Description: Item Description
-  MaxStackSize: 999
+  MaxStackSize: 1
   Value: 0
   Weight: 0
   Icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
