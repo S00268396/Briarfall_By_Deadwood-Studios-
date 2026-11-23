@@ -57,7 +57,7 @@
                     "priority": 0
                 },
                 {
-                    "name": "FlashLight",
+                    "name": "OilLamp",
                     "type": "Button",
                     "id": "32e6cf07-1f77-404f-9106-9ea470b1767e",
                     "expectedControlType": "",
@@ -170,11 +170,11 @@
                 {
                     "name": "",
                     "id": "8f123ac9-1285-4619-aa8c-66f7bcee599c",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "FlashLight",
+                    "action": "OilLamp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

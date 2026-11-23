@@ -143,7 +143,7 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
                     ""priority"": 0
                 },
                 {
-                    ""name"": ""FlashLight"",
+                    ""name"": ""OilLamp"",
                     ""type"": ""Button"",
                     ""id"": ""32e6cf07-1f77-404f-9106-9ea470b1767e"",
                     ""expectedControlType"": """",
@@ -256,11 +256,11 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8f123ac9-1285-4619-aa8c-66f7bcee599c"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""FlashLight"",
+                    ""action"": ""OilLamp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -276,7 +276,7 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
         m_Game_Look = m_Game.FindAction("Look", throwIfNotFound: true);
         m_Game_Sprint = m_Game.FindAction("Sprint", throwIfNotFound: true);
         m_Game_Crouch = m_Game.FindAction("Crouch", throwIfNotFound: true);
-        m_Game_FlashLight = m_Game.FindAction("FlashLight", throwIfNotFound: true);
+        m_Game_OilLamp = m_Game.FindAction("OilLamp", throwIfNotFound: true);
     }
 
     ~@ApplicationActions()
@@ -362,7 +362,7 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Game_Look;
     private readonly InputAction m_Game_Sprint;
     private readonly InputAction m_Game_Crouch;
-    private readonly InputAction m_Game_FlashLight;
+    private readonly InputAction m_Game_OilLamp;
     /// <summary>
     /// Provides access to input actions defined in input action map "Game".
     /// </summary>
@@ -395,9 +395,9 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Crouch => m_Wrapper.m_Game_Crouch;
         /// <summary>
-        /// Provides access to the underlying input action "Game/FlashLight".
+        /// Provides access to the underlying input action "Game/OilLamp".
         /// </summary>
-        public InputAction @FlashLight => m_Wrapper.m_Game_FlashLight;
+        public InputAction @OilLamp => m_Wrapper.m_Game_OilLamp;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -439,9 +439,9 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
             @Crouch.started += instance.OnCrouch;
             @Crouch.performed += instance.OnCrouch;
             @Crouch.canceled += instance.OnCrouch;
-            @FlashLight.started += instance.OnFlashLight;
-            @FlashLight.performed += instance.OnFlashLight;
-            @FlashLight.canceled += instance.OnFlashLight;
+            @OilLamp.started += instance.OnOilLamp;
+            @OilLamp.performed += instance.OnOilLamp;
+            @OilLamp.canceled += instance.OnOilLamp;
         }
 
         /// <summary>
@@ -468,9 +468,9 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
             @Crouch.started -= instance.OnCrouch;
             @Crouch.performed -= instance.OnCrouch;
             @Crouch.canceled -= instance.OnCrouch;
-            @FlashLight.started -= instance.OnFlashLight;
-            @FlashLight.performed -= instance.OnFlashLight;
-            @FlashLight.canceled -= instance.OnFlashLight;
+            @OilLamp.started -= instance.OnOilLamp;
+            @OilLamp.performed -= instance.OnOilLamp;
+            @OilLamp.canceled -= instance.OnOilLamp;
         }
 
         /// <summary>
@@ -547,11 +547,11 @@ public partial class @ApplicationActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnCrouch(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "FlashLight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "OilLamp" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnFlashLight(InputAction.CallbackContext context);
+        void OnOilLamp(InputAction.CallbackContext context);
     }
 }
