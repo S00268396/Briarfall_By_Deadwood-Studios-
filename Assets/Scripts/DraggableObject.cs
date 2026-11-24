@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class DragAndDrop : MonoBehaviour
+public class DraggableObject : MonoBehaviour
 {
     private Camera cam;
     private Plane dragPlane;
