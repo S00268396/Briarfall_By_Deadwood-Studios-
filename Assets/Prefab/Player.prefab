@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 2777358149629559275}
   - component: {fileID: 5635861866694319329}
   - component: {fileID: 3022804060235108022}
+  - component: {fileID: 6450554382115839210}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -346,6 +347,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 33ce7bff-3a37-4034-a224-2b9c76dd0369
     m_ActionName: 'Game/Crouch[/Keyboard/q]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32e6cf07-1f77-404f-9106-9ea470b1767e
+    m_ActionName: 'Game/OilLamp[/Keyboard/f]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game
@@ -379,3 +384,17 @@ MonoBehaviour:
   HorizonSensitivity: 0.1
   VerticalSensitivity: 0.1
   IsCursorVisible: 1
+--- !u!114 &6450554382115839210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5904722434222977879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a34a8eae5bbb34fb8b001688bc6ce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
+  Triggerdata: {fileID: 0}
+  CheckPointText: {fileID: 0}
