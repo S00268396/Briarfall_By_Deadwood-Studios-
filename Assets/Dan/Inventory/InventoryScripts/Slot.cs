@@ -1,15 +1,28 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Slot : MonoBehaviour
+public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("UI Components")]
     public Image iconDisplay; // optional: found automatically from the child named "Icon"
 
+    [HideInInspector] public int slotIndex;     //assigned automatically by InventoryManager
+    [HideInInspector] public bool isHovering;   //True while mouse is over this slot
+
     bool resolved;
 
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        isHovering = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isHovering = false;
+    }
+
     // Always use THIS slot's own child called "Icon", whatever the Inspector field says.
-    // Done on first use (not in Awake) so it also works for slots that start inactive.
     void ResolveIcon()
     {
         if (resolved) return;

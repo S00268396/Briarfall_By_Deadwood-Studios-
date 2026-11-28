@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class ToolPickup : MonoBehaviour
 {
     [SerializeField] private ToolType toolToGrant = ToolType.Sickle;
+    [SerializeField] private BaseTemData itemData;  //Drag item_sickle here
     [SerializeField] private bool autoPickupOnWalkOver = false; // True = walk over to grab, False = press E
 
     private PlayerToolHandler playerInRange;
@@ -41,6 +42,13 @@ public class ToolPickup : MonoBehaviour
     private void PickUp()
     {
         playerInRange.EquipTool(toolToGrant);
+
+        InventoryManager inventoryManager = FindFirstObjectByType<InventoryManager>();
+        if(inventoryManager != null && itemData != null)
+        {
+            inventoryManager.AddItem(itemData, 1);
+        }
+
         Destroy(gameObject); // Removes the world pickup from the ground
     }
 }

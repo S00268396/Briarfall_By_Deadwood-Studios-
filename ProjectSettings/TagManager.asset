@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - SkinwalkerMimic
   - Checkpoint
+  - Chaser
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
+  - Tree
   - Interactable
   - 
   - 

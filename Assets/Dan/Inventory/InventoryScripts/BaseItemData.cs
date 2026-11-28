@@ -18,6 +18,7 @@ public class BaseTemData : ScriptableObject
     public float Value = 0;
     public float Weight = 0;
     public Sprite Icon;
+    public bool isTool = false; //tick this in the inspector for tools/weapons
 
 #if UNITY_EDITOR
     private void OnValidate()

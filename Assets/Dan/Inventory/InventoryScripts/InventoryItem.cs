@@ -11,6 +11,8 @@ public class InventoryItem
     public int CurrentStackSize;
 
     public InventoryItem() { }
+    
+    public bool isEmpty => Item == null || CurrentStackSize <= 0;
 
     public InventoryItem(BaseTemData item, int currentStackSize)
     {
@@ -29,8 +31,8 @@ public class InventoryItem
     {
         return new Save()
         {
-            ID = Item.ID,
-            CurrentStackSize = CurrentStackSize
+            ID = Item != null ? Item.ID : "",
+            CurrentStackSize = Item != null ? CurrentStackSize : 0
         };
     }
 }
